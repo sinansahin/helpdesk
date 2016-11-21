@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ticket:</strong>
+  <%= @ticket_task.ticket_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @ticket_task.user_id %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @ticket_task.content %>
+</p>
+
+<p>
+  <strong>Is done:</strong>
+  <%= @ticket_task.is_done %>
+</p>
+
+<%= link_to 'Edit', edit_ticket_task_path(@ticket_task) %> |
+<%= link_to 'Back', ticket_tasks_path %>

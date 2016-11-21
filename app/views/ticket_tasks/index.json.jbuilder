@@ -1,0 +1,1 @@
+json.array! @ticket_tasks, partial: 'ticket_tasks/ticket_task', as: :ticket_task

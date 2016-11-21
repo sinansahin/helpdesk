@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :ticket_tasks
   resources :ticket_messages
   resources :tickets
   resources :ticket_statuses

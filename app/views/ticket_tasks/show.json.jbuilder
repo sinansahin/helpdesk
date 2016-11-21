@@ -1,0 +1,1 @@
+json.partial! "ticket_tasks/ticket_task", ticket_task: @ticket_task
