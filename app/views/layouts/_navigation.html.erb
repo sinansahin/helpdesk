@@ -1,0 +1,36 @@
+<div class="wrapper">
+	<div class="row">
+		<div class="col-md-12">
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="navbar-header">
+					 
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						 <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+					</button> <%= link_to "HelpDesk", root_path, :class => "navbar-brand" %>
+				</div>
+				
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="#">Çağrı Açın</a>
+						</li>
+						<li>
+							<a href="#">Çağrılarım</a>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						
+						<% if !user_signed_in? %>
+							<li><%= link_to "Giriş", new_user_session_path %></li>
+						<% else %> 
+							<li><%= link_to current_user.email, "#" %></li>
+							<li><%= link_to "Çıkış", destroy_user_session_path, method: :delete %></li>
+						<% end %>
+						
+					</ul>
+				</div>
+				
+			</nav>
+		</div>
+	</div>
+</div>
