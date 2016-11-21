@@ -1,0 +1,1 @@
+json.array! @ticket_messages, partial: 'ticket_messages/ticket_message', as: :ticket_message
