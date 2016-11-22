@@ -1,5 +1,6 @@
 class TicketTasksController < ApplicationController
   before_action :set_ticket_task, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /ticket_tasks
   # GET /ticket_tasks.json

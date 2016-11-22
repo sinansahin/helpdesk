@@ -1,5 +1,6 @@
 class TicketMessagesController < ApplicationController
   before_action :set_ticket_message, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /ticket_messages
   # GET /ticket_messages.json

@@ -1,5 +1,6 @@
 class TicketStatusesController < ApplicationController
   before_action :set_ticket_status, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /ticket_statuses
   # GET /ticket_statuses.json

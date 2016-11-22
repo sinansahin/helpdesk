@@ -1,5 +1,6 @@
 class TicketCategoriesController < ApplicationController
   before_action :set_ticket_category, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /ticket_categories
   # GET /ticket_categories.json
