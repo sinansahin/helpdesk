@@ -1,1 +1,0 @@
-json.array! @ticket_task_assignments, partial: 'ticket_task_assignments/ticket_task_assignment', as: :ticket_task_assignment

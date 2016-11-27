@@ -1,39 +1,46 @@
-<p id="notice"><%= notice %></p>
-
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
 <p>
   <strong>User:</strong>
   <%= @ticket.user_id %>
 </p>
 
 <p>
-  <strong>Organization:</strong>
-  <%= @ticket.organization_id %>
+  <strong>Unit:</strong>
+  <%= @ticket.unit_id %>
 </p>
 
 <p>
-  <strong>Title:</strong>
+  <strong>Kısa Açıklama:</strong>
   <%= @ticket.title %>
 </p>
 
 <p>
-  <strong>Content:</strong>
+  <strong>Detaylı Açıklama:</strong>
   <%= @ticket.content %>
 </p>
 
 <p>
-  <strong>Ticket category:</strong>
+  <strong>Çağrı Kategorisi:</strong>
   <%= @ticket.ticket_category_id %>
 </p>
 
 <p>
-  <strong>Ticket status:</strong>
+  <strong>Çağrı Durumu:</strong>
   <%= @ticket.ticket_status_id %>
 </p>
 
 <p>
-  <strong>Contact:</strong>
+  <strong>Çağrı Türü:</strong>
+  <%= @ticket.ticket_type_id %>
+</p>
+
+<p>
+  <strong>İletişim Bilgileri(Dahili):</strong>
   <%= @ticket.contact %>
 </p>
 
 <%= link_to 'Edit', edit_ticket_path(@ticket) %> |
 <%= link_to 'Back', tickets_path %>
+  </div>
+</div>

@@ -1,1 +1,0 @@
-json.partial! "ticket_task_assignments/ticket_task_assignment", ticket_task_assignment: @ticket_task_assignment

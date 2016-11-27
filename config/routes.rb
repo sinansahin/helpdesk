@@ -1,13 +1,9 @@
 Rails.application.routes.draw do
-  resources :units
-  resources :organizations
-  resources :ticket_task_assignments
   resources :ticket_tasks
   resources :ticket_messages
   resources :tickets
   resources :ticket_statuses
   resources :ticket_categories
-  resources :ticket_types
   devise_for :users
   root 'home#index'
 

@@ -2,16 +2,18 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :user_id %>
-    <%= f.input :organization_id %>
-    <%= f.input :title %>
-    <%= f.input :content %>
-    <%= f.input :ticket_category_id %>
-    <%= f.input :ticket_status_id %>
-    <%= f.input :contact %>
+    <div class="row">
+    <%= f.input :ticket_category_id, label: 'Kategorisi:', collection: TicketCategory.all, wrapper_html: { class: 'col-md-4' }  %>
+    <%= f.input :ticket_status_id, label: 'Durumu:', collection: TicketStatus.all, wrapper_html: { class: 'col-md-2' } %>
+    
+    <%= f.input :user_id, label: 'Çağrı Sahibi:', placeholder: current_user.email, wrapper_html: { class: 'col-md-6' }  %>
+    <%= f.input :title, label: 'Kısa Açıklama:', wrapper_html: { class: 'col-md-12' } %>
+    <%= f.input :content, label: 'Detaylı Açıklama:', wrapper_html: { class: 'col-md-12' } %>
+    <%= f.input :contact, label: 'İletişim Bilgileri(Dahili/Gsm):', wrapper_html: { class: 'col-md-12' } %>
+    </div>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, "Kaydet" %>
   </div>
 <% end %>
